@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/hire.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+
+        <a href="#home" class="logo">
+            J.<span>M</span>
+        </a>
+
+
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            
+            <a href="project.html">Portfolio</a>
+            <a href="#" class="active wavy-text">Hire Me!</a>
+        </nav>
+
+        <!-- <button class="gradient-btn">Hire Me!</button> -->
+    </header>
+    
+    <section class="home" id="home">
+    <video autoplay muted loop playsinline class="background-video">
+        <source src="assets/img/Comp_8.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    </section>
+
+
+    <div class="lot">
+        <div class="container">
+            <div class="sec-title">
+                <h2>CONTACT</h2>
+            </div>
+            <h1 class="heading" style="text-transform: uppercase;"><span>Let's get </span>in touch!</h1>
+            <div class="row mt-5 d-flex align-items-center">
+                <div class="col-lg-6 col-sm-12  w-80">
+                    <div class="lottie" style="text-align: center;">
+                        <img src="assets/img/hire4.png" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-12 d-flex">
+                    <div class="contact-info w-90">
+                        <div class="info-box">
+                            <div class="info-icon">
+                                <i class="fa-solid fa-location-dot gradient-icon"></i>
+                            </div>
+                            <div class="info-text" >
+                                <h4>My Address</h4>
+                                <div class="gradient-link">
+                                    <p>Butuan City, Philippines</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <div class="info-icon">
+                                <i class="fa-solid fa-envelope gradient-icon"></i>
+                            </div>
+                            <div class="info-text">
+                                <h4>Email</h4>
+                                <a href="mailto:jennymaedelatorre15@gmail.com" class="gradient-link">
+                                    <p>jennymaedelatorre15@gmail.com</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <div class="info-icon">
+                                <i class="fa-solid fa-phone gradient-icon"></i>
+                            </div>
+                            <div class="info-text">
+                                <h4>WhatsApp Number</h4>
+                                <a href="https://wa.me/639925653933" target="_blank" class="gradient-link">
+                                    <p>+639925653933</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <div class="info-icon">
+                                <i class="fa-brands fa-linkedin gradient-icon"></i>
+                            </div>
+                            <div class="info-text">
+                                <h4>Linkedin</h4>
+                                <a href="https://www.linkedin.com/in/jenny-mae-delatorre-018b52326/" target="_blank" class="gradient-link">
+                                    <p>www.linkedin.com/in/jennymae15</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <div class="info-icon">
+                                <i class="fa-brands fa-github gradient-icon"></i>
+                            </div>
+                            <div class="info-text">
+                                <h4>Github</h4>
+                                <a href="https://github.com/jennymae08" target="_blank" class="gradient-link">
+                                    <p>https://github.com/jennymae08</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <!-- NAVBARRRRRR -->
+    <script>
+        // JavaScript to handle the menu toggle
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuIcon = document.querySelector('#menu-icon');
+            const navbar = document.querySelector('.navbar');
+
+            menuIcon.addEventListener('click', () => {
+                navbar.classList.toggle('active');
+            });
+        });
+
+    </script>
+    
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

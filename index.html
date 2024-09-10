@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="about.html">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+
+        <a href="#home" class="logo">
+            J.<span>M</span>
+        </a>
+
+
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#" class="active">Home</a>
+            <a href="about.html">About</a>
+            
+            <a href="project.html">Portfolio</a>
+            <a href="hire.html" class="wavy-text">Hire Me!</a>
+        </nav>
+
+        <!-- <button class="gradient-btn">Hire Me!</button> -->
+    </header>
+    
+    <section class="home" id="home">
+    <video autoplay muted loop playsinline class="background-video">
+        <source src="assets/img/Comp_8.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+            <!-- <img src="assets/img/g1.jpg" alt=""> -->
+            <div class="container">
+                <div class="row">
+                    <!-- First Column: Home Content -->
+                    <div class="col-lg-9 col-md-12 col-sm-12 order-2 order-lg-1">
+                        <div class="home-content">
+                            <h1 style="letter-spacing: 2px;">Hi, I'm <span class="name">Jenny!</span></h1>
+                            <h3 style="letter-spacing: 2px; ">An aspiring <span id="typewriter" class="typewriter">Web Developer</span></h3>
+                            <p>Hi, I'm Jenny Mae. I'm an aspiring Web Developer, Mobile Developer, and Graphic Designer Enthusiast. I love creating
+                                websites,
+                                building apps, and making sure they're secure. My goal is to bring your ideas to life with clean, efficient,
+                                and user-friendly designs.</p>
+                            <br>
+                            <p>Check out my work and see how I can help with your next project!</p>
+                    
+                            <div class="social-icons">
+                                <a href="https://github.com/jennymae08" target="_blank">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                                <!-- <a href="#">
+                                    <i class="fa-brands fa-square-instagram"></i>
+                                </a> -->
+                                <a href="https://www.linkedin.com/in/jenny-mae-delatorre-018b52326/" target="_blank">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </a>                                
+                                <a href="https://www.facebook.com/jennymae.quarteros" target="_blank">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Second Column: Image -->
+                    <div class="col-lg-3 col-md-12 col-sm-12 order-1 order-lg-2">
+                        <div class="home-img">
+                            <img src="assets/img/HUHU.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+    </section>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Handle the menu toggle
+            const menuIcon = document.querySelector('#menu-icon');
+            const navbar = document.querySelector('.navbar');
+    
+            menuIcon.addEventListener('click', () => {
+                navbar.classList.toggle('active');
+            });
+    
+            // Add active class to the current link
+            const navbarLinks = document.querySelectorAll('.navbar a');
+    
+            navbarLinks.forEach(link => {
+                if (link.href === window.location.href) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+    
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add the loaded class to body after everything is fully loaded
+            setTimeout(() => {
+                document.body.classList.add('loaded');
+            }, 100); // Small delay to ensure that the content has started rendering
+        });
+
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const element = document.getElementById('typewriter');
+            const phrases = ["Mobile Developer", "Web Developer", "Graphic Designer"];
+            let phraseIndex = 0;
+            let charIndex = 0;
+            let currentPhrase = '';
+            let isDeleting = false;
+
+            function type() {
+                if (isDeleting) {
+                    // Delete characters
+                    currentPhrase = phrases[phraseIndex].substring(0, charIndex);
+                    charIndex--;
+                    element.textContent = currentPhrase;
+
+                    if (charIndex < 0) {
+                        isDeleting = false;
+                        phraseIndex = (phraseIndex + 1) % phrases.length; // Move to the next phrase
+                        setTimeout(type, 500); // Wait 3 seconds before starting to add characters
+                        return;
+                    }
+                } else {
+                    // Add characters
+                    currentPhrase = phrases[phraseIndex].substring(0, charIndex + 1);
+                    element.textContent = currentPhrase;
+
+                    if (charIndex === phrases[phraseIndex].length - 1) {
+                        isDeleting = true;
+                        setTimeout(type, 3000); // Wait 3 seconds before starting to delete characters
+                        return;
+                    }
+                    charIndex++;
+                }
+
+                setTimeout(type, isDeleting ? 100 : 150); // Adjust typing speed
+            }
+
+            type(); // Start typing effect
+        });
+
+    </script>
+
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
