@@ -128,38 +128,16 @@ span{
     border-bottom: 3px solid var(--main-color);
 }
 
-.gradient-btn {
-    font-size: 1.8rem;
-    padding: 1rem 2rem;
-    border-radius: 3rem;
-    /* background: linear-gradient(
-        270deg,
-        var(--main-color1) 0%,
-        var(--main-color1) 100%
-    ); */
-    background: linear-gradient(
-        270deg,
-        #DF8908 10%,
-        #ff1d15 100%
-    );
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-    color: white;
-    border: none;
-    text-wrap: nowrap;
-}
-.gradient-btn:hover{
-    transform: scale(1.05);
-}
+
 
 section{
     min-height: 100vh;
     padding: 10rem 15%;
 }
 .background-video {
+    position: fixed;
     filter: brightness(30%) blur(1px);
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     left: 0;
     width: 100%;
@@ -206,12 +184,14 @@ section{
     text-align: left;
 }
 .home-content h1{
+    letter-spacing: 2px;
     font-size: 7.5rem;
     font-weight: 700;
     margin-top: 1.5rem;
     line-height: 1;
 }
 .home-content h3{
+    letter-spacing: 2px;
     width: 100%;
     margin: 1rem 0;
     font-size: 4rem;
@@ -358,6 +338,9 @@ section{
     .home-content p {
         width: 100%;
     }
+    .header {
+        padding: 2.5rem 15%;
+    }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
     .home-img {
@@ -411,3 +394,6 @@ section{
     }
     
 }
+
+
+/* AAABOOUUUUUUUTTTTT SECTIOOOOOOOOONNN */

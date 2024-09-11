@@ -188,6 +188,7 @@ span{
     color: #fff;
     font-weight: bolder;
     letter-spacing: 2px; 
+    text-transform: uppercase;
 }
 
 
@@ -224,14 +225,16 @@ span{
         display: block;
     }
 
-    .gradient-btn {
-        display: none;
+    .header {
+        padding: 2.5rem 15%;
     }
     
 }
 
 /* INFOOOOOOOOOOO */
-
+.lottie {
+    text-align: center;
+}
 .lottie img{
     width: 90%;
     transition: transform 0.5s ease-in-out, color 0.3s ease;
