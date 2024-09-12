@@ -482,6 +482,38 @@ section{
     animation: fadeInUp 0.9s ease-out;
 }
 
-
+/* Footer  */
+.footer {
+    display: flex;
+    justify-content: end;
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 15px;
+    font-size: 13px;
+    color: #fff;
+    z-index: 999999;
+  }
+  
+  @media (max-width: 992px) {
+    .footer {
+      justify-content: center;
+      padding: 10px;
+      background-color: rgb(0, 0, 0, 0.85);
+    }
+  }
+  
+  .footer img {
+    transition: 0.3s;
+    animation: credits-img 5s infinite;
+  }
+  
+  @keyframes credits-img {
+    50% {
+      transform: rotateY(180deg);
+    }
+  }
+  
 
 
