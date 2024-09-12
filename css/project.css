@@ -1,8 +1,8 @@
 
 
-/* SAAAAAAAAA CAAAARRDDDDDDDDDD */
-.project-item{
-    z-index: 5;
+/* Project */
+.project .container{
+    margin-top: 30px;
 }
 .work {
     z-index: 5;
@@ -42,35 +42,11 @@
   .card-img-top:hover {
     transform: scale(1.05); 
   }
-/* 
-  
-.project .card, 
-.project h3, 
-.project p, 
-.project a {
-    opacity: 0; 
-    transform: translateY(50px); 
-    transition: all 0.6s ease-in-out; 
-}
 
-
-.visible .card,
-.visible h3,
-.visible p,
-.visible a {
-    opacity: 1; 
-    transform: translateY(0); 
-}
-
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
+  @media (max-width: 767px) {
+    .card{
+        width: 300px;
+        height: 200px;
     }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-} */
-
+}
 

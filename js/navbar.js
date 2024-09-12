@@ -7,12 +7,37 @@ document.addEventListener('DOMContentLoaded', () => {
         navbar.classList.toggle('active');
     });
 
-    // Add active class to the current link
-    const navbarLinks = document.querySelectorAll('.navbar a');
+    // Update active link on page load
+    updateActiveLinkOnScroll();
+});
 
-    navbarLinks.forEach(link => {
-        if (link.href === window.location.href) {
+function updateActiveLinkOnScroll() {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const headerHeight = document.querySelector('.header').offsetHeight; // Get header height to account for fixed header
+
+    let currentSection = '';
+
+    const scrollPosition = window.scrollY; // Current scroll position
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - headerHeight; // Adjust section top by header height
+        const sectionHeight = section.clientHeight;
+
+        // Adjusted condition to activate the correct section
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            currentSection = section.getAttribute('id');
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').substring(1) === currentSection) {
             link.classList.add('active');
         }
     });
+}
+
+document.addEventListener('scroll', function() {
+    updateActiveLinkOnScroll();
 });
