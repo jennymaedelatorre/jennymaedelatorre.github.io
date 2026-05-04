@@ -462,6 +462,35 @@ body.loaded #home-content {
 
 /* certificatessss */
 
+.custom-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6); 
+    color: white !important; 
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: 0.3s ease;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+/* Positioning */
+.prev-icon { left: 10px; }
+.next-icon { right: 10px; }
+
+
+.custom-nav:hover {
+    background: #6FAF4F;
+    color: white !important;
+}
+
 .carousel-indicators [data-bs-target] {
     width: 30px;
     height: 5px;
@@ -795,6 +824,11 @@ body.loaded #home-content {
         max-width: 30px !important; 
     }
 
+    .custom-nav {
+        color: #6FAF4F !important;
+        display: none !important;
+    }
+
     .cert-card {
         max-width: 320px; 
     }
@@ -823,5 +857,17 @@ body.loaded #home-content {
     .profile-pic {
         width: 200px;
         height: 200px;
+    }
+}
+
+@media (min-width: 768px) {
+    .custom-nav {
+        display: none !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .custom-nav {
+        display: flex !important;
     }
 }

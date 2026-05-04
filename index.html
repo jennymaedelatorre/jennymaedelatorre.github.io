@@ -55,8 +55,8 @@
 
 
 
-    <div class="fullscreen-video-wrap">
-        <video src="assets/video/bg7.mp4" autoplay loop muted></video>
+    <div class="fullscreen-video-wrap" style="min-height: 100vh; background: black;">
+        <video src="assets/video/bg7.mp4" autoplay loop muted class="d-none d-md-block w-100"></video>
     </div>
     <div class="header-overlay"></div>
 
@@ -70,7 +70,7 @@
                     J<span style="color: #6FAF4F;">.M</span>
                 </a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                <button class="navbar-toggler border-0 shadow-none"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -746,7 +746,9 @@
                 </h2>
             </div>
 
-            <div id="certCarousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- data-bs-interval="false" -->
+             <!-- data-bs-ride="carousel" -->
+            <div id="certCarousel" class="carousel slide">
                 <div class="carousel-indicators" style="bottom: -50px;">
                     <button type="button" data-bs-target="#certCarousel" data-bs-slide-to="0" class="active"
                         aria-current="true"></button>
@@ -835,6 +837,15 @@
                         </div>
                     </div>
                 </div>
+            <button class="carousel-control-prev border-0 bg-transparent custom-nav prev-icon" type="button"
+                data-bs-target="#certCarousel" data-bs-slide="prev">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            
+            <button class="carousel-control-next border-0 bg-transparent custom-nav next-icon" type="button"
+                data-bs-target="#certCarousel" data-bs-slide="next">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
             </div>
         </section>
 
